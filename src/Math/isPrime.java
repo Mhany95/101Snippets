@@ -2,7 +2,7 @@ package Math;
 
 public class isPrime implements MathOperationInterface {
 
-	public boolean doOperation(int n)
+	public boolean doCheckOperation(double n)
 	{
 		//Checking number isn't prime
 		if((n!=2) && (n!=3)&& (n!=5) && (n!=7) && (n!=11) && (n!=13))
@@ -14,4 +14,26 @@ public class isPrime implements MathOperationInterface {
 		}
 		return true; //prime
 	}
+
+	@Override
+	public double doOperation(double n1) {
+		// TODO Auto-generated method stub
+		System.out.println("Invalid method.");
+		return 0;
+	}
+
+	@Override
+	public double doOperation(double n1, double n2) {
+		// TODO Auto-generated method stub
+		System.out.println("Invalid number of arguments.");
+		return 0;
+	}
+
+	@Override
+	public double[] doOperation(double[] n1, double[] n2) {
+		// TODO Auto-generated method stub
+		System.out.println("Invalid number of arguments.");
+		return null;
+	}
+
 }

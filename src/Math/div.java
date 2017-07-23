@@ -7,7 +7,7 @@ public class div implements MathOperationInterface {
 	//numbers
 	public double doOperation(double n1, double n2)
 	{
-		return n1+n2;
+		return n1/n2;
 	}
 	
 	
@@ -43,6 +43,22 @@ public class div implements MathOperationInterface {
 		}
 		
 		return n3;
+	}
+
+
+	@Override
+	public double doOperation(double n1) {
+		// TODO Auto-generated method stub
+		System.out.println("Invalid number of arguments.");
+		return n1;
+	}
+
+
+	@Override
+	public boolean doCheckOperation(double n1) {
+		// TODO Auto-generated method stub
+		System.out.println("Invalid method.");
+		return false;
 	}
 
 }

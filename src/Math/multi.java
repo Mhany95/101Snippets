@@ -40,4 +40,20 @@ public class multi implements MathOperationInterface {
 		return n3;
 	}
 
+
+	@Override
+	public double doOperation(double n1) {
+		// TODO Auto-generated method stub
+		System.out.println("Invalid number of arguments.");
+		return n1;
+	}
+
+
+	@Override
+	public boolean doCheckOperation(double n1) {
+		// TODO Auto-generated method stub
+		System.out.println("Invalid method.");
+		return false;
+	}
+
 }
