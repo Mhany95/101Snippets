@@ -67,4 +67,10 @@ public class Snippet {
 		MathOp= new isPrime();
 		return MathOp.doCheckOperation(n1);
 	}
+	
+	public double fibonacci (double n1)
+	{
+		MathOp= new fibonacci();
+		return MathOp.doOperation(n1);
+	}
 }

@@ -14,6 +14,6 @@ public class main {
 //		factorial x=new factorial();
 //		System.out.println(x.doOperation(10));
 		Snippet s= new Snippet();
-		System.out.println(s.add(r,rr));
+		System.out.println(s.fibonacci(7));
 	}
 }
