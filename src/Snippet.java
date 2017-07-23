@@ -1,5 +1,7 @@
-import Math.*;
+import java.awt.image.BufferedImage;
 
+import Math.*;
+import ImageProcessing.*;
 
 //This is a wrapper class, it will be used to access all the other packages
 //It hides the logic of each class by using the interface of each package
@@ -8,7 +10,10 @@ import Math.*;
 public class Snippet {
 
 	private MathOperationInterface MathOp;
+	private ImageProcessingOperationInterface ImgOp;
 	
+	
+	//------------------Math Operations----------------------
 	public double add(double n1,double n2)
 	{
 		MathOp= new add();
@@ -72,5 +77,14 @@ public class Snippet {
 	{
 		MathOp= new fibonacci();
 		return MathOp.doOperation(n1);
+	}
+	
+	
+	//-----------------Image Operations-------------------
+	
+	public BufferedImage changeBrightness(BufferedImage input, int value)
+	{
+		ImgOp= new brightness();
+		return ImgOp.doOperation(input, value);
 	}
 }
