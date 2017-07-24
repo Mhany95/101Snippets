@@ -87,4 +87,16 @@ public class Snippet {
 		ImgOp= new brightness();
 		return ImgOp.doOperation(input, value);
 	}
+	
+	public BufferedImage grayscale(BufferedImage input)
+	{
+		ImgOp= new grayscale();
+		return ImgOp.doOperation(input);
+	}
+	
+	public BufferedImage gamma(BufferedImage input, double value)
+	{
+		ImgOp=new gamma();
+		return ImgOp.doOperation(input, value);
+	}
 }

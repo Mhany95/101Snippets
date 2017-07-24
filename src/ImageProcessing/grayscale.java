@@ -3,19 +3,19 @@ package ImageProcessing;
 import java.awt.Color;
 import java.awt.image.BufferedImage;
 
-public class brightness implements ImageProcessingOperationInterface {
+public class grayscale implements ImageProcessingOperationInterface {
 
 	//Image after operation
 	private BufferedImage outputImg;
 	
 	@Override
-	public BufferedImage doOperation(BufferedImage inputImg, double value) {
+	public BufferedImage doOperation(BufferedImage inputImg) {
 		
 		outputImg=new BufferedImage(inputImg.getWidth(), inputImg.getHeight(), BufferedImage.TYPE_INT_RGB);
 		
 		//iterating over each pixel, extract the rgb and alpha values
-		//add the value, the higher the added value the more bright it will be
-		//cutoff if it's more than 255
+		//add the rgb values and then divide the result by 3 to get average
+		//set the new values to the average value
 		
 		for (int i=0;i<inputImg.getWidth();i++)
 		{
@@ -28,20 +28,12 @@ public class brightness implements ImageProcessingOperationInterface {
 				int g=pixel.getGreen();
 				int alpha=pixel.getAlpha();
 				
-				r+=value;
+				int avg=r+g+b;
+				avg/=3;
 				
-				if(r>255)
-				{r=255;}
-				
-				g+=value;
-				
-				if(g>255)
-				{g=255;}
-				
-				b+=value;
-				
-				if(b>255)
-				{b=255;}
+				r=avg;
+				g=avg;
+				b=avg;
 				
 				//setting new colors
 				Color newPixel= new Color(r,g,b,alpha);
@@ -54,7 +46,7 @@ public class brightness implements ImageProcessingOperationInterface {
 	}
 	
 	@Override
-	public BufferedImage doOperation(BufferedImage input) {
+	public BufferedImage doOperation(BufferedImage input, double value) {
 		// TODO Auto-generated method stub
 		return input;
 	}
