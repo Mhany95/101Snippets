@@ -10,10 +10,10 @@ public class main {
 	{
 		Snippet s= new Snippet();
 		System.out.println(s.fibonacci(7));
-		File imgFile= new File("test.jpg");
+		File imgFile= new File("D://c.bmp");
 		BufferedImage img;
 		try {
-			ImageIO.write(s.changeBrightness(ImageIO.read(imgFile),50),"jpg",new File("t.jpg"));
+			ImageIO.write(s.gamma(ImageIO.read(imgFile),.5),"jpg",new File("t.jpg"));
 			System.out.println("done");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

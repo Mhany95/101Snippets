@@ -99,4 +99,10 @@ public class Snippet {
 		ImgOp=new gamma();
 		return ImgOp.doOperation(input, value);
 	}
+	
+	public BufferedImage threshold(BufferedImage input, double value)
+	{
+		ImgOp=new threshold();
+		return ImgOp.doOperation(input, value);
+	}
 }
