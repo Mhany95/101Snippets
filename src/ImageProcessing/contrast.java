@@ -1,20 +1,32 @@
 package ImageProcessing;
 
+import java.awt.Color;
 import java.awt.image.BufferedImage;
 
 public class contrast implements ImageProcessingOperationInterface {
 
-	public void doOperation(String imgPath, float newMin, float newMax)
+	//Image after operation
+	private BufferedImage outputImg;
+	
+	public BufferedImage doOperation(BufferedImage inputImg, double newMin, double newMax)
 	{
-		float diff=newMax-newMin;
-		float oldminb=255,oldmaxb=0,oldminr=255,oldmaxr=0,oldming=255,oldmaxg=0;
+		
+		outputImg=new BufferedImage(inputImg.getWidth(), inputImg.getHeight(), BufferedImage.TYPE_INT_RGB);
+		
+		//iterating over each pixel, get the minimum and maximum value to each color
+		//iterate again, this time apply a function on each color using the retrieved min and max values 
+		//corresponding to that color, along with the input new min and new max values.
+		//cutoff if it's more than 255
+
+		double diff=newMax-newMin;
+		double oldminb=255,oldmaxb=0,oldminr=255,oldmaxr=0,oldming=255,oldmaxg=0;
 		
 		//getting old min and old max -error was assuming that old min=0 and oldmax= 255
-		for (int i=0;i<img.getWidth();i++)
+		for (int i=0;i<inputImg.getWidth();i++)
 		{
-			for (int j=0;j<img.getHeight();j++)
+			for (int j=0;j<inputImg.getHeight();j++)
 			{
-				Color pixel=new Color(img.getRGB(i, j));
+				Color pixel=new Color(inputImg.getRGB(i, j));
 				float r=pixel.getRed();
 				float b=pixel.getBlue();
 				float g=pixel.getGreen();
@@ -37,12 +49,12 @@ public class contrast implements ImageProcessingOperationInterface {
 			}
 		}
 		
-		for (int i=0;i<img.getWidth();i++)
+		for (int i=0;i<inputImg.getWidth();i++)
 		{
-			for (int j=0;j<img.getHeight();j++)
+			for (int j=0;j<inputImg.getHeight();j++)
 			{
 				//extracting rgb values of a pixel
-				Color pixel=new Color(img.getRGB(i, j));
+				Color pixel=new Color(inputImg.getRGB(i, j));
 				float r=pixel.getRed();
 				float b=pixel.getBlue();
 				float g=pixel.getGreen();
@@ -92,13 +104,12 @@ public class contrast implements ImageProcessingOperationInterface {
 				//setting new colors
 				Color newPixel= new Color(ir,ig,ib,ialpha);
 				
-				img.setRGB(i, j, newPixel.getRGB());
+				outputImg.setRGB(i, j, newPixel.getRGB());
 				
 			}
 		}
 		
-		System.out.println("ops done");
-	
+		return outputImg;
 	}
 	
 	@Override

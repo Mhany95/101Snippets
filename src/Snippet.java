@@ -105,4 +105,10 @@ public class Snippet {
 		ImgOp=new threshold();
 		return ImgOp.doOperation(input, value);
 	}
+	
+	public BufferedImage contrast(BufferedImage input, double newMin, double newMax)
+	{
+		ImgOp=new contrast();
+		return ImgOp.doOperation(input, newMin, newMax);
+	}
 }
