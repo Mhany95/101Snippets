@@ -60,5 +60,12 @@ public class gamma implements ImageProcessingOperationInterface {
 	}
 
 
+	@Override
+	public BufferedImage doOperation(BufferedImage input, double val1, double val2) {
+		// TODO Auto-generated method stub
+		return input;
+	}
+
+
 
 }

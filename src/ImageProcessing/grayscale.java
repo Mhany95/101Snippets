@@ -51,5 +51,11 @@ public class grayscale implements ImageProcessingOperationInterface {
 		return input;
 	}
 
+	@Override
+	public BufferedImage doOperation(BufferedImage input, double val1, double val2) {
+		// TODO Auto-generated method stub
+		return input;
+	}
+
 	
 }
