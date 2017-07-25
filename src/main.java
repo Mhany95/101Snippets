@@ -9,11 +9,12 @@ public class main {
 	public static void main(String[] args)
 	{
 		Snippet s= new Snippet();
-		System.out.println(s.fibonacci(7));
-		File imgFile= new File("D://c.bmp");
+		File imgFile= new File("D://1.jpg");
+		File imgFile2= new File("D://e.jpg");
+
 		BufferedImage img;
 		try {
-			ImageIO.write(s.gamma(ImageIO.read(imgFile),.5),"jpg",new File("t.jpg"));
+			ImageIO.write(s.mergePhotos(ImageIO.read(imgFile),ImageIO.read(imgFile2)),"jpg",new File("t.jpg"));
 			System.out.println("done");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

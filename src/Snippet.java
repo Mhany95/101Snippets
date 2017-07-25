@@ -111,4 +111,10 @@ public class Snippet {
 		ImgOp=new contrast();
 		return ImgOp.doOperation(input, newMin, newMax);
 	}
+	
+	public BufferedImage mergePhotos(BufferedImage input1,BufferedImage input2)
+	{
+		ImgOp=new mergePhotos();
+		return ImgOp.doOperation(input1, input2);
+	}
 }
