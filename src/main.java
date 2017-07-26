@@ -14,7 +14,7 @@ public class main {
 
 		BufferedImage img;
 		try {
-			ImageIO.write(s.grayscale(ImageIO.read(imgFile)),"jpg",new File("t.jpg"));
+			ImageIO.write(s.changeBrightness(ImageIO.read(imgFile),-60),"jpg",new File("t.jpg"));
 			System.out.println("done");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

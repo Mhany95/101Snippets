@@ -96,18 +96,33 @@ public class Snippet {
 	
 	public BufferedImage gamma(BufferedImage input, double value)
 	{
+		if(value<0)
+		{
+			System.err.println("Input value should be positive, returning original image.");
+			return input;
+		}
 		ImgOp=new gamma();
 		return ImgOp.doOperation(input, value);
 	}
 	
-	public BufferedImage threshold(BufferedImage input, double value)
+	public BufferedImage threshold(BufferedImage input, int value)
 	{
+		if(value<0)
+		{
+			System.err.println("Input value should be positive, returning original image.");
+			return input;
+		}
 		ImgOp=new threshold();
 		return ImgOp.doOperation(input, value);
 	}
 	
-	public BufferedImage contrast(BufferedImage input, double newMin, double newMax)
+	public BufferedImage contrast(BufferedImage input, int newMin, int newMax)
 	{
+		if(newMin<0 ||newMax<0)
+		{
+			System.err.println("Input value(s) should be positive, returning original image.");
+			return input;
+		}
 		ImgOp=new contrast();
 		return ImgOp.doOperation(input, newMin, newMax);
 	}
