@@ -15,7 +15,7 @@ public class brightness implements ImageProcessingOperationInterface {
 		
 		//iterating over each pixel, extract the rgb and alpha values
 		//add the value, the higher the added value the more bright it will be
-		//cutoff if it's more than 255
+		//cutoff if it's more than 255 and make it 0 if it's negative
 		
 		for (int i=0;i<inputImg.getWidth();i++)
 		{
@@ -32,16 +32,22 @@ public class brightness implements ImageProcessingOperationInterface {
 				
 				if(r>255)
 				{r=255;}
+				else if (r<0)
+				{r=0;}
 				
 				g+=value;
 				
 				if(g>255)
 				{g=255;}
+				else if (g<0)
+				{g=0;}
 				
 				b+=value;
 				
 				if(b>255)
 				{b=255;}
+				else if (b<0)
+				{b=0;}
 				
 				//setting new colors
 				Color newPixel= new Color(r,g,b,alpha);

@@ -14,7 +14,7 @@ public class main {
 
 		BufferedImage img;
 		try {
-			ImageIO.write(s.mergePhotos(ImageIO.read(imgFile),ImageIO.read(imgFile2)),"jpg",new File("t.jpg"));
+			ImageIO.write(s.grayscale(ImageIO.read(imgFile)),"jpg",new File("t.jpg"));
 			System.out.println("done");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
