@@ -12,8 +12,9 @@ public class mergePhotos implements ImageProcessingOperationInterface {
 	public BufferedImage doOperation(BufferedImage inputImg, BufferedImage inputImg2) {
 		
 		
-		//iterating over each pixel, extract the rgb and alpha values
-		//add the value, the higher the added value the more bright it will be
+		//get dimension of each photo first
+		//set the output image dimensions to match the minimum height and the minimum width of the 2 photos
+		//iterate over the two photos, get the rgb values of each one and add them together
 		//cutoff if it's more than 255
 		
 		//range according to smaller dimensions
