@@ -3,15 +3,17 @@ package ImageProcessing;
 import java.awt.Color;
 import java.awt.image.BufferedImage;
 
+import Snippet.Snippet;
+
 public class mergePhotos implements ImageProcessingOperationInterface {
 
 	//Image after operation
 	private BufferedImage outputImg;
 
 	@Override
-	public BufferedImage doOperation(BufferedImage inputImg, BufferedImage inputImg2) {
+	public BufferedImage doOperation(Snippet.Signature signature, BufferedImage inputImg, BufferedImage inputImg2) {
 		
-		
+		signature.hashCode();
 		//get dimension of each photo first
 		//set the output image dimensions to match the minimum height and the minimum width of the 2 photos
 		//iterate over the two photos, get the rgb values of each one and add them together
@@ -82,21 +84,23 @@ public class mergePhotos implements ImageProcessingOperationInterface {
 	}
 	
 	@Override
-	public BufferedImage doOperation(BufferedImage input) {
+	public BufferedImage doOperation(Snippet.Signature signature, BufferedImage input) {
 		// TODO Auto-generated method stub
+		signature.hashCode();
 		return null;
 	}
 
 	@Override
-	public BufferedImage doOperation(BufferedImage input, double value) {
+	public BufferedImage doOperation(Snippet.Signature signature, BufferedImage input, double value) {
 		// TODO Auto-generated method stub
+		signature.hashCode();
 		return null;
 	}
 
 	@Override
-	public BufferedImage doOperation(BufferedImage input, double val1,
-			double val2) {
+	public BufferedImage doOperation(Snippet.Signature signature, BufferedImage input, double val1, double val2) {
 		// TODO Auto-generated method stub
+		signature.hashCode();
 		return null;
 	}
 

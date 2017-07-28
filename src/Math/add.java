@@ -2,18 +2,22 @@ package Math;
 
 import java.awt.List;
 
+import Snippet.Snippet;
+
 public class add implements MathOperationInterface {
 
 	//numbers
-	public double doOperation(double n1, double n2)
+	public double doOperation(Snippet.Signature signature, double n1, double n2)
 	{
+		signature.hashCode();
 		return n1+n2;
 	}
 	
 	
 	//arrays
-	public double[] doOperation(double[] n1, double[] n2)
+	public double[] doOperation(Snippet.Signature signature, double[] n1, double[] n2)
 	{
+		signature.hashCode();
 		//get length of both arrays
 		int l1= n1.length;
 		int l2= n2.length;
@@ -49,15 +53,17 @@ public class add implements MathOperationInterface {
 
 
 	@Override
-	public double doOperation(double n1) {
+	public double doOperation(Snippet.Signature signature, double n1) {
 		// TODO Auto-generated method stub
+		signature.hashCode();
 		return n1;
 	}
 
 
 	@Override
-	public boolean doCheckOperation(double n1) {
+	public boolean doCheckOperation(Snippet.Signature signature, double n1) {
 		// TODO Auto-generated method stub
+		signature.hashCode();
 		System.out.println("Invalid method.");
 		return false;
 	}

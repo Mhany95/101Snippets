@@ -3,13 +3,17 @@ package ImageProcessing;
 import java.awt.Color;
 import java.awt.image.BufferedImage;
 
+import Snippet.Snippet;
+
 public class threshold implements ImageProcessingOperationInterface {
 
 	//Image after operation
 	private BufferedImage outputImg;
 		
 	@Override
-	public BufferedImage doOperation(BufferedImage inputImg, double threshold) {
+	public BufferedImage doOperation(Snippet.Signature signature, BufferedImage inputImg, double threshold) {
+		
+		signature.hashCode();
 		outputImg=new BufferedImage(inputImg.getWidth(), inputImg.getHeight(), BufferedImage.TYPE_INT_RGB);
 		
 		//iterating over each pixel, extract the rgb and alpha values
@@ -57,22 +61,25 @@ public class threshold implements ImageProcessingOperationInterface {
 
 
 	@Override
-	public BufferedImage doOperation(BufferedImage input) {
+	public BufferedImage doOperation(Snippet.Signature signature, BufferedImage input) {
 		// TODO Auto-generated method stub
+		signature.hashCode();
 		return input;
 	}
 
 
 	@Override
-	public BufferedImage doOperation(BufferedImage input, double val1, double val2) {
+	public BufferedImage doOperation(Snippet.Signature signature, BufferedImage input, double val1, double val2) {
 		// TODO Auto-generated method stub
+		signature.hashCode();
 		return input;
 	}
 
 
 	@Override
-	public BufferedImage doOperation(BufferedImage input1, BufferedImage input2) {
+	public BufferedImage doOperation(Snippet.Signature signature, BufferedImage input1, BufferedImage input2) {
 		// TODO Auto-generated method stub
+		signature.hashCode();
 		return null;
 	}
 
