@@ -1,3 +1,4 @@
+package Snippet;
 import java.awt.image.BufferedImage;
 
 import Math.*;
