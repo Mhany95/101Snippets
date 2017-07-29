@@ -2,9 +2,16 @@ package ImageProcessing;
 
 import java.awt.Color;
 import java.awt.image.BufferedImage;
+import Snippet.*;
 
 public class contrast implements ImageProcessingOperationInterface {
 
+	private contrast(){};
+	public contrast(Snippet.Signature signature)
+	{
+		signature.hashCode();
+	}
+	
 	//Image after operation
 	private BufferedImage outputImg;
 	

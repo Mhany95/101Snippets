@@ -2,9 +2,16 @@ package ImageProcessing;
 
 import java.awt.Color;
 import java.awt.image.BufferedImage;
+import Snippet.*;
 
 public class mergePhotos implements ImageProcessingOperationInterface {
 
+	private mergePhotos(){};
+	public mergePhotos(Snippet.Signature signature)
+	{
+		signature.hashCode();
+	}
+	
 	//Image after operation
 	private BufferedImage outputImg;
 

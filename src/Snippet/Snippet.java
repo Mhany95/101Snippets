@@ -9,7 +9,17 @@ import ImageProcessing.*;
 //It should be used in main
 
 public class Snippet {
-
+	
+	//Nested "Signature" class will enforce the use of "Snippet" instead of using
+	//the other classes directly
+	
+	public class Signature {
+		
+		private Signature()
+		{} 
+		}
+	
+    private Signature signature;
 	private MathOperationInterface MathOp;
 	private ImageProcessingOperationInterface ImgOp;
 	
@@ -85,13 +95,15 @@ public class Snippet {
 	
 	public BufferedImage changeBrightness(BufferedImage input, int value)
 	{
-		ImgOp= new brightness();
+		signature= new Signature();
+		ImgOp= new brightness(signature);
 		return ImgOp.doOperation(input, value);
 	}
 	
 	public BufferedImage grayscale(BufferedImage input)
 	{
-		ImgOp= new grayscale();
+		signature= new Signature();
+		ImgOp= new grayscale(signature);
 		return ImgOp.doOperation(input);
 	}
 	
@@ -102,7 +114,8 @@ public class Snippet {
 			System.err.println("Input value should be positive, returning original image.");
 			return input;
 		}
-		ImgOp=new gamma();
+		signature= new Signature();
+		ImgOp=new gamma(signature);
 		return ImgOp.doOperation(input, value);
 	}
 	
@@ -113,7 +126,8 @@ public class Snippet {
 			System.err.println("Input value should be positive, returning original image.");
 			return input;
 		}
-		ImgOp=new threshold();
+		signature= new Signature();
+		ImgOp=new threshold(signature);
 		return ImgOp.doOperation(input, value);
 	}
 	
@@ -124,13 +138,15 @@ public class Snippet {
 			System.err.println("Input value(s) should be positive, returning original image.");
 			return input;
 		}
-		ImgOp=new contrast();
+		signature= new Signature();
+		ImgOp=new contrast(signature);
 		return ImgOp.doOperation(input, newMin, newMax);
 	}
 	
 	public BufferedImage mergePhotos(BufferedImage input1,BufferedImage input2)
 	{
-		ImgOp=new mergePhotos();
+		signature= new Signature();
+		ImgOp=new mergePhotos(signature);
 		return ImgOp.doOperation(input1, input2);
 	}
 }
