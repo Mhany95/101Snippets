@@ -160,4 +160,18 @@ public class Snippet {
 		ImgOp=new mergePhotos(signature);
 		return ImgOp.doOperation(input1, input2);
 	}
+	
+	public BufferedImage photoEffect_SEPIA(BufferedImage input)
+	{
+		signature= new Signature();
+		ImgOp= new sepia(signature);
+		return ImgOp.doOperation(input);
+	}
+	
+	public BufferedImage photoEffect_NEGATIVE(BufferedImage input)
+	{
+		signature= new Signature();
+		ImgOp= new negative(signature);
+		return ImgOp.doOperation(input);
+	}
 }

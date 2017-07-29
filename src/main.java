@@ -11,12 +11,12 @@ public class main {
 	public static void main(String[] args)
 	{
 		Snippet s= new Snippet();
-		File imgFile= new File("D://1.jpg");
+		File imgFile= new File("D://e.jpg");
 		File imgFile2= new File("D://e.jpg");
 
 		BufferedImage img;
 		try {
-			ImageIO.write(s.changeBrightness(ImageIO.read(imgFile),-60),"jpg",new File("t.jpg"));
+			ImageIO.write(s.photoEffect_NEGATIVE(ImageIO.read(imgFile)),"jpg",new File("t.jpg"));
 			System.out.println("done");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
