@@ -1,7 +1,14 @@
 package Math;
+import Snippet.*;
 
 public class fibonacci implements MathOperationInterface {
 
+	private fibonacci(){};
+	public fibonacci(Snippet.Signature signature)
+	{
+		signature.hashCode();
+	}
+	
 	@Override
 	public double doOperation(double n1) {
 

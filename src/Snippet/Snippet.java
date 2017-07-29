@@ -27,66 +27,77 @@ public class Snippet {
 	//------------------Math Operations----------------------
 	public double add(double n1,double n2)
 	{
-		MathOp= new add();
+		signature= new Signature();
+		MathOp= new add(signature);
 		return MathOp.doOperation(n1, n2);
 	}
 	
 	public double[] add(double[] n1, double[] n2)
 	{
-		MathOp= new add();
+		signature= new Signature();
+		MathOp= new add(signature);
 		return MathOp.doOperation(n1, n2);
 	}
 	public double sub(double n1,double n2)
 	{
-		MathOp= new sub();
+		signature= new Signature();
+		MathOp= new sub(signature);
 		return MathOp.doOperation(n1, n2);
 	}
 	
 	public double[] sub(double[] n1, double[] n2)
 	{
-		MathOp= new sub();
+		signature= new Signature();
+		MathOp= new sub(signature);
 		return MathOp.doOperation(n1, n2);
 	}
 	
 	public double div(double n1,double n2)
 	{
-		MathOp= new div();
+		signature= new Signature();
+		MathOp= new div(signature);
 		return MathOp.doOperation(n1, n2);
 	}
 	
 	public double[] div(double[] n1, double[] n2)
 	{
-		MathOp= new div();
+		signature= new Signature();
+		MathOp= new div(signature);
 		return MathOp.doOperation(n1, n2);
 	}
 	
 	public double multi(double n1,double n2)
 	{
-		MathOp= new multi();
+		signature= new Signature();
+		MathOp= new multi(signature);
 		return MathOp.doOperation(n1, n2);
 	}
 	
 	public double[] multi(double[] n1, double[] n2)
 	{
-		MathOp= new multi();
+		signature= new Signature();
+		MathOp= new multi(signature);
 		return MathOp.doOperation(n1, n2);
 	}
 	
 	public double factorial(double n1)
 	{
-		MathOp= new factorial();
+		signature= new Signature();
+		MathOp= new factorial(signature);
 		return MathOp.doOperation(n1);
 	}
 	
 	public boolean isPrime(double n1)
 	{
-		MathOp= new isPrime();
+		signature= new Signature();
+		MathOp= new primeNumber(signature);
 		return MathOp.doCheckOperation(n1);
 	}
 	
 	public double fibonacci (double n1)
 	{
-		MathOp= new fibonacci();
+		signature= new Signature();
+		MathOp= new fibonacci(signature);
 		return MathOp.doOperation(n1);
 	}
 	

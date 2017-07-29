@@ -1,7 +1,14 @@
 package Math;
+import Snippet.*;
 
-public class isPrime implements MathOperationInterface {
+public class primeNumber implements MathOperationInterface {
 
+	private primeNumber(){};
+	public primeNumber(Snippet.Signature signature)
+	{
+		signature.hashCode();
+	}
+	
 	public boolean doCheckOperation(double n)
 	{
 		//Checking number isn't prime

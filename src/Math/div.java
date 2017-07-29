@@ -1,9 +1,16 @@
 package Math;
 
 import java.awt.List;
+import Snippet.*;
 
 public class div implements MathOperationInterface {
 
+	private div(){};
+	public div(Snippet.Signature signature)
+	{
+		signature.hashCode();
+	}
+	
 	//numbers
 	public double doOperation(double n1, double n2)
 	{

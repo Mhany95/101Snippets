@@ -1,7 +1,14 @@
 package Math;
+import Snippet.*;
 
 public class factorial implements MathOperationInterface {
 
+	private factorial(){};
+	public factorial(Snippet.Signature signature)
+	{
+		signature.hashCode();
+	}
+	
 	public double doOperation(double n)
 	{
 		double res=1;

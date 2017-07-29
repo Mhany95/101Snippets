@@ -1,9 +1,16 @@
 package Math;
 
 import java.awt.List;
+import Snippet.*;
 
 public class multi implements MathOperationInterface {
 
+	private multi(){};
+	public multi(Snippet.Signature signature)
+	{
+		signature.hashCode();
+	}
+	
 	//numbers
 	public double doOperation(double n1, double n2)
 	{
