@@ -3,17 +3,14 @@ package ImageProcessing;
 import java.awt.Color;
 import java.awt.image.BufferedImage;
 
-import Snippet.Snippet;
-
 public class grayscale implements ImageProcessingOperationInterface {
 
 	//Image after operation
 	private BufferedImage outputImg;
 	
 	@Override
-	public BufferedImage doOperation(Snippet.Signature signature, BufferedImage inputImg) {
+	public BufferedImage doOperation(BufferedImage inputImg) {
 		
-		signature.hashCode();
 		outputImg=new BufferedImage(inputImg.getWidth(), inputImg.getHeight(), BufferedImage.TYPE_INT_RGB);
 		
 		//iterating over each pixel, extract the rgb and alpha values
@@ -49,23 +46,20 @@ public class grayscale implements ImageProcessingOperationInterface {
 	}
 	
 	@Override
-	public BufferedImage doOperation(Snippet.Signature signature, BufferedImage input, double value) {
+	public BufferedImage doOperation(BufferedImage input, double value) {
 		// TODO Auto-generated method stub
-		signature.hashCode();
 		return input;
 	}
 
 	@Override
-	public BufferedImage doOperation(Snippet.Signature signature, BufferedImage input, double val1, double val2) {
+	public BufferedImage doOperation(BufferedImage input, double val1, double val2) {
 		// TODO Auto-generated method stub
-		signature.hashCode();
 		return input;
 	}
 
 	@Override
-	public BufferedImage doOperation(Snippet.Signature signature, BufferedImage input1, BufferedImage input2) {
+	public BufferedImage doOperation(BufferedImage input1, BufferedImage input2) {
 		// TODO Auto-generated method stub
-		signature.hashCode();
 		return null;
 	}
 

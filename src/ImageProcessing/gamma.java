@@ -3,17 +3,14 @@ package ImageProcessing;
 import java.awt.Color;
 import java.awt.image.BufferedImage;
 
-import Snippet.Snippet;
-
 public class gamma implements ImageProcessingOperationInterface {
 
 	//Image after operation
 	private BufferedImage outputImg;
 	
 	@Override
-	public BufferedImage doOperation(Snippet.Signature signature, BufferedImage inputImg, double gammaValue) {
+	public BufferedImage doOperation(BufferedImage inputImg, double gammaValue) {
 		
-			signature.hashCode();
 			outputImg=new BufferedImage(inputImg.getWidth(), inputImg.getHeight(), BufferedImage.TYPE_INT_RGB);
 			
 			//get inverse of the input gamma value
@@ -57,25 +54,22 @@ public class gamma implements ImageProcessingOperationInterface {
 
 	
 	@Override
-	public BufferedImage doOperation(Snippet.Signature signature, BufferedImage input) {
+	public BufferedImage doOperation(BufferedImage input) {
 		// TODO Auto-generated method stub
-		signature.hashCode();
 		return input;
 	}
 
 
 	@Override
-	public BufferedImage doOperation(Snippet.Signature signature, BufferedImage input, double val1, double val2) {
+	public BufferedImage doOperation(BufferedImage input, double val1, double val2) {
 		// TODO Auto-generated method stub
-		signature.hashCode();
 		return input;
 	}
 
 
 	@Override
-	public BufferedImage doOperation(Snippet.Signature signature, BufferedImage input1, BufferedImage input2) {
+	public BufferedImage doOperation(BufferedImage input1, BufferedImage input2) {
 		// TODO Auto-generated method stub
-		signature.hashCode();
 		return null;
 	}
 

@@ -3,16 +3,14 @@ package ImageProcessing;
 import java.awt.Color;
 import java.awt.image.BufferedImage;
 
-import Snippet.Snippet;
-
 public class contrast implements ImageProcessingOperationInterface {
 
 	//Image after operation
 	private BufferedImage outputImg;
 	
-	public BufferedImage doOperation(Snippet.Signature signature, BufferedImage inputImg, double newMin, double newMax)
+	public BufferedImage doOperation(BufferedImage inputImg, double newMin, double newMax)
 	{
-		signature.hashCode();
+		
 		outputImg=new BufferedImage(inputImg.getWidth(), inputImg.getHeight(), BufferedImage.TYPE_INT_RGB);
 		
 		//iterating over each pixel, get the minimum and maximum value to each color
@@ -115,23 +113,20 @@ public class contrast implements ImageProcessingOperationInterface {
 	}
 	
 	@Override
-	public BufferedImage doOperation(Snippet.Signature signature, BufferedImage input) {
+	public BufferedImage doOperation(BufferedImage input) {
 		// TODO Auto-generated method stub
-		signature.hashCode();
 		return input;
 	}
 
 	@Override
-	public BufferedImage doOperation(Snippet.Signature signature, BufferedImage input, double value) {
+	public BufferedImage doOperation(BufferedImage input, double value) {
 		// TODO Auto-generated method stub
-		signature.hashCode();
 		return input;
 	}
 
 	@Override
-	public BufferedImage doOperation(Snippet.Signature signature, BufferedImage input1, BufferedImage input2) {
+	public BufferedImage doOperation(BufferedImage input1, BufferedImage input2) {
 		// TODO Auto-generated method stub
-		signature.hashCode();
 		return null;
 	}
 

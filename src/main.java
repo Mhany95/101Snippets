@@ -4,8 +4,6 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-import Snippet.Snippet;
-
 
 public class main {
 	public static void main(String[] args)
