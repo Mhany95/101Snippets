@@ -181,4 +181,11 @@ public class Snippet {
 		ImgOp= new blue(signature);
 		return ImgOp.doOperation(input);
 	}
+	
+	public BufferedImage photoEffect_RED(BufferedImage input)
+	{
+		signature= new Signature();
+		ImgOp= new red(signature);
+		return ImgOp.doOperation(input);
+	}
 }
