@@ -16,7 +16,7 @@ public class main {
 
 		BufferedImage img;
 		try {
-			ImageIO.write(s.photoEffect_NEGATIVE(ImageIO.read(imgFile)),"jpg",new File("t.jpg"));
+			ImageIO.write(s.photoEffect_BLUE(ImageIO.read(imgFile)),"jpg",new File("tt.jpg"));
 			System.out.println("done");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

@@ -174,4 +174,11 @@ public class Snippet {
 		ImgOp= new negative(signature);
 		return ImgOp.doOperation(input);
 	}
+	
+	public BufferedImage photoEffect_BLUE(BufferedImage input)
+	{
+		signature= new Signature();
+		ImgOp= new blue(signature);
+		return ImgOp.doOperation(input);
+	}
 }
