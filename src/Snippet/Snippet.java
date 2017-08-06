@@ -195,4 +195,11 @@ public class Snippet {
 		ImgOp= new green(signature);
 		return ImgOp.doOperation(input);
 	}
+	
+	public BufferedImage meanFilter(BufferedImage input, int width, int height)
+	{
+		signature= new Signature();
+		ImgOp= new mean(signature);
+		return ImgOp.doOperation(input, width, height);
+	}
 }
