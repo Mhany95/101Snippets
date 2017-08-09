@@ -16,7 +16,7 @@ public class main {
 
 		BufferedImage img;
 		try {
-			ImageIO.write(s.meanFilter(ImageIO.read(imgFile2),3,3),"jpg",new File("tuuut.jpg"));
+			ImageIO.write(s.createThumbnail(ImageIO.read(imgFile2),300,100),"jpg",new File("tuut.jpg"));
 			System.out.println("done");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

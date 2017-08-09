@@ -202,4 +202,16 @@ public class Snippet {
 		ImgOp= new mean(signature);
 		return ImgOp.doOperation(input, width, height);
 	}
+	
+	public BufferedImage createThumbnail(BufferedImage input, int width, int height)
+	{
+		if(width<0 || height<0)
+		{
+			System.err.println("Input values should be positive, returning original image.");
+			return input;
+		}
+		signature= new Signature();
+		ImgOp= new thumbnail(signature);
+		return ImgOp.doOperation(input, width, height);
+	}
 }
