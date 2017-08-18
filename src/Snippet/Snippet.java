@@ -214,4 +214,11 @@ public class Snippet {
 		ImgOp= new thumbnail(signature);
 		return ImgOp.doOperation(input, width, height);
 	}
+	
+	public BufferedImage rotateImage(BufferedImage input)
+	{
+		signature= new Signature();
+		ImgOp= new rotate(signature);
+		return ImgOp.doOperation(input);
+	}
 }

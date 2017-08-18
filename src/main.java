@@ -16,7 +16,7 @@ public class main {
 
 		BufferedImage img;
 		try {
-			ImageIO.write(s.createThumbnail(ImageIO.read(imgFile2),300,100),"jpg",new File("tuut.jpg"));
+			ImageIO.write(s.rotateImage(ImageIO.read(imgFile)),"jpg",new File("tut.jpg"));
 			System.out.println("done");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
